@@ -32,7 +32,7 @@ two_sample_gaffke(
 A P-value indicating for the hypothesis test H_0: \eqn{\mu_2 <= \mu_1}
 }
 \description{
-A function to run a one-sided, two-sample nonparametric test based on the Gaffke (Learned-Miller and Thomas) test.
+A function to run a one-sided, two-sample nonparametric test based on the Gaffke test.
 In particular, given IID samples from two distributions with means \eqn{\mu_1} and \eqn{\mu_2} the hypothesis H_0: \eqn{\mu_2 <= \mu_1} is tested.
 The test assumes that the distributions share common bounds [a,b], where a is the smallest and b is the largest value that samples from the populations can take.
 If the distribution is contained within these bounds, the test is valid (P-values are dominated by the uniform distribution) no matter the shape of the population distributions.

@@ -1,4 +1,5 @@
 #' Gaffke bound as described in Learned-Miller and Thomas https://arxiv.org/pdf/1905.06208.pdf
+#' @export
 #' @param x A vector of iid random samples from some distribution F with mean mu
 #' @param alpha The level; the output is a (1-alpha) confidence bound
 #' @param B the number of Monte Carlo iterations to estimate the interval

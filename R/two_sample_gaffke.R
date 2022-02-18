@@ -1,5 +1,6 @@
 #' Two-sample test of mean dominance
-#' @description A function to run a one-sided, two-sample nonparametric test based on the Gaffke (Learned-Miller and Thomas) test.
+#' @export
+#' @description A function to run a one-sided, two-sample nonparametric test based on the Gaffke test.
 #' In particular, given IID samples from two distributions with means \eqn{\mu_1} and \eqn{\mu_2} the hypothesis H_0: \eqn{\mu_2 <= \mu_1} is tested. 
 #' The test assumes that the distributions share common bounds \[a,b\], where a is the smallest and b is the largest value that samples from the populations can take.
 #' If the distribution is contained within these bounds, the test is valid (P-values are dominated by the uniform distribution) no matter the shape of the population distributions.
@@ -65,11 +66,7 @@ two_sample_gaffke <- function(sample_1, sample_2, B = 1000, method = "fisher", b
     }
     
     max_p_val <- optimize(combined_p, lower = min(c(ms_1, ms_2)), upper = max(c(ms_1, ms_2)), maximum = TRUE)$objective
-    if(pval){
-      max_p_val
-    } else{
-      ifelse(max_p_val < alpha, TRUE, FALSE)
-    }
+    max_p_val
   } else{
     stop("Input a valid method: sidak, fisher, liptak, or tippett")
   }
