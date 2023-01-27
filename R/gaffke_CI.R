@@ -6,6 +6,8 @@
 #' @param side the side of the confidence interval, either "upper" or "lower"
 #' @return An upper or lower level alpha confidence bound on the population mean mu
 gaffke_CI <- function(x, alpha = .05, B = 10000, side = "upper"){
+  if(anyNA(x)){stop("Samples have NA values")}
+  
   n <- length(x)
   if(side == "lower"){
     x <- 1 - x
