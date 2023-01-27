@@ -17,6 +17,8 @@
 #' @examples 
 #' two_sample_gaffke(sample_1 = rbeta(30, shape1 = 5, shape2 = 0.5), sample_2 = rbeta(30, shape1 = 100, shape2 = 10))
 two_sample_gaffke <- function(sample_1, sample_2, B = 1000, method = "fisher", bounds = c(0,1)){
+  if(anyNA(sample_1) | anyNA(sample_2)){stop("Samples have NA values")}
+  
   sample_1 <- (sample_1 - bounds[1]) / diff(bounds)
   sample_2 <- (sample_2 - bounds[1]) / diff(bounds)
   if(method == "sidak"){
