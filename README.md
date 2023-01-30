@@ -9,7 +9,7 @@ Contains two functions:
 
 The inference is finite-sample, nonparametric (FSNP) in the sense that, if the bounds truly contain the support of the population distribution, the resulting P-values and confidence intervals are valid: P-values are dominated by the uniform distribution and confidence intervals have coverage greater than their nominal level. 
 
-This validity property is ~conjectured~, not proven, but there is considerable evidence that it is true. For more details see:
+This validity property is _conjectured_, not proven, but there is considerable evidence that it is true. For more details see:
 
 1) Gaffke, N. 'Three test statistics for a nonparametric one-sided hypothesis on the mean of a nonnegative variable.' (2004) https://www.math.uni-magdeburg.de/institute/imst/ag_gaffke/files/pp1304.pdf
 2) Learned-Miller, E and Thomas, P. 'A new confidence interval for the mean of a bounded random variable.' (2019) http://arxiv.org/abs/1905.06208
